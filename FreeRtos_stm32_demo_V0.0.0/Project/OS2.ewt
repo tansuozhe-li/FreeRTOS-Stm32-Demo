@@ -1190,6 +1190,9 @@
         <group>
             <name>inc</name>
             <file>
+                <name>$PROJ_DIR$\..\APP\Inc\FreeRTOSConfig.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\APP\Inc\main.h</name>
             </file>
             <file>
@@ -1301,5 +1304,38 @@
         <file>
             <name>$PROJ_DIR$\startup_stm32f407xx.s</name>
         </file>
+    </group>
+    <group>
+        <name>FreeRTOS</name>
+        <group>
+            <name>port</name>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\port\MemMang\heap_4.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\port\IAR\ARM_CM4F\port.c</name>
+            </file>
+        </group>
+        <group>
+            <name>src</name>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\src\croutine.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\src\event_groups.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\src\list.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\src\queue.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\src\tasks.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\FreeRTOS\src\timers.c</name>
+            </file>
+        </group>
     </group>
 </project>

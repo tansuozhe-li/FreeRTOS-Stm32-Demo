@@ -1,20 +1,24 @@
-"D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c"
+"D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c"
 -std=c11
 -ferror-limit=0
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Project\..\APP\Inc
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\APP\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Project\..\Drivers\CMSIS\STM32F4xx\Include
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\CMSIS\STM32F4xx\Include
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Project\..\Drivers\gpio
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\gpio
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Project\..\Drivers\usart
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\usart
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Project\..\Drivers\sysclk
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\sysclk
+-I
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\FreeRTOS\include
+-I
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\FreeRTOS\port\IAR\ARM_CM4F
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
@@ -22,19 +26,23 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc\c
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\APP\Inc
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\APP\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Drivers\CMSIS\STM32F4xx\Include
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\CMSIS\STM32F4xx\Include
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Drivers\gpio
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\gpio
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Drivers\STM32F4xx_HAL_Driver\Inc
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\STM32F4xx_HAL_Driver\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Drivers\usart
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\usart
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo\Drivers\sysclk
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\sysclk
+-I
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\FreeRTOS\include
+-I
+D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\FreeRTOS\port\IAR\ARM_CM4F
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8
@@ -313,6 +321,7 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__EDG_CPP11_IL_EXTENSIONS_SUPPORTED=1
 -D__EDG_FLOAT80_ENABLING_POSSIBLE=0
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
+-DUSE_HAL_DRIVER=1
 -DSTM32F407xx=1
 -D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
 -D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"

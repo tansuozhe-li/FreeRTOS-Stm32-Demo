@@ -10,7 +10,8 @@
 #include "usart.h"
 #include "gpio.h"
 #include "sysclk.h"
-
+#include "FreeRTOS.h"
+#include "task.h"
 
 
 /**
