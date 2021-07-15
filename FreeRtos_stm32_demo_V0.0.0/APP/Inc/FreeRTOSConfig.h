@@ -71,7 +71,7 @@
 #ifndef FREERTOS_CONFIG_H
 #define FREERTOS_CONFIG_H
 
-#include "stm32f407xx.h"
+//#include "stm32f407xx.h"
 
 /*-----------------------------------------------------------
  * Application specific definitions.
@@ -92,10 +92,10 @@
 #endif
 
 //断言
-#if 0
-#define vAssertCalled(char,int)  print("Error:%s,%d\r\n",char,int)
-#defint configASSERT(x) if((x) == 0)  vAssertCalled(__FILE__,__LINE__)
-#endif
+//#if 0
+//#define vAssertCalled(char,int)  print("Error:%s,%d\r\n",char,int)
+//#defint configASSERT(x) if((x) == 0)  vAssertCalled(__FILE__,__LINE__)
+//#endif
 
 /*******************************************************************************
                            FreeRTOS基础配置选项
@@ -135,6 +135,7 @@
 空闲任务使用的栈大小
 */
 #define configMINIMAL_STACK_SIZE		    ( ( unsigned short ) 128 )
+#define configTIMER_TASK_STACK_SIZE                 ( ( unsigned short ) 128 )
 /*
 任务名的字符串长度
 */
@@ -185,6 +186,10 @@
 支持动态内存分配申请
 */
 #define configSUPPORT_DYNAMIC_ALLOCATION            1
+/*
+支持静态内存分配申请
+*/
+#define configSUPPORT_STATIC_ALLOCATION             0
 /*
 系统所有栈的大小
 */

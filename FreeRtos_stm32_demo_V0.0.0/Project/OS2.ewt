@@ -1190,10 +1190,10 @@
         <group>
             <name>inc</name>
             <file>
-                <name>$PROJ_DIR$\..\APP\Inc\FreeRTOSConfig.h</name>
+                <name>$PROJ_DIR$\..\APP\Inc\app_cfg.h</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\APP\Inc\main.h</name>
+                <name>$PROJ_DIR$\..\APP\Inc\FreeRTOSConfig.h</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\APP\Inc\stm32f4xx_hal_conf.h</name>
@@ -1205,7 +1205,7 @@
         <group>
             <name>src</name>
             <file>
-                <name>$PROJ_DIR$\..\APP\Src\main.c</name>
+                <name>$PROJ_DIR$\..\APP\Src\app.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\APP\Src\stm32f4xx_hal_msp.c</name>
@@ -1221,6 +1221,15 @@
             <name>CMSIS</name>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\CMSIS\STM32F4xx\Source\system_stm32f4xx.c</name>
+            </file>
+        </group>
+        <group>
+            <name>debug</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\debug\debug.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\debug\debug.h</name>
             </file>
         </group>
         <group>
@@ -1337,5 +1346,8 @@
                 <name>$PROJ_DIR$\..\FreeRTOS\src\timers.c</name>
             </file>
         </group>
+        <file>
+            <name>$PROJ_DIR$\..\FreeRTOS\port\IAR\ARM_CM4F\portasm.s</name>
+        </file>
     </group>
 </project>

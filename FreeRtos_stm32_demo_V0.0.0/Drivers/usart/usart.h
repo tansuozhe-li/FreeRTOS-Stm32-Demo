@@ -24,8 +24,13 @@
 extern "C" {
 #endif
 
+#define USART1_TX_Pin GPIO_PIN_9
+#define USART1_TX_GPIO_Port GPIOA
+#define USART1_RX_Pin GPIO_PIN_10
+#define USART1_RX_GPIO_Port GPIOA
+  
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+#include "app_cfg.h"
 
 /* USER CODE BEGIN Includes */
 
@@ -37,12 +42,12 @@ extern UART_HandleTypeDef huart1;
 
 /* USER CODE END Private defines */
 
-void MX_USART1_UART_Init(void);
+void USART1_UART_Init(void);
 
 /* USER CODE BEGIN Prototypes */
 
 /* USER CODE END Prototypes */
-
+void Error_Handler(void);
 #ifdef __cplusplus
 }
 #endif

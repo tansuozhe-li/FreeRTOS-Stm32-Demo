@@ -24,8 +24,13 @@
 extern "C" {
 #endif
 
+ #define LED0_Pin GPIO_PIN_13
+#define LED0_GPIO_Port GPIOG
+#define LED1_Pin GPIO_PIN_14
+#define LED1_GPIO_Port GPIOG
+  
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+#include "app_cfg.h"
 
 /* USER CODE BEGIN Includes */
 
