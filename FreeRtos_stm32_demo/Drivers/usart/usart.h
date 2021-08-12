@@ -4,54 +4,58 @@
   * @brief   This file contains all the function prototypes for
   *          the usart.c file
   ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2021 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
   */
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __USART_H__
 #define __USART_H__
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+#include "common.h"
+#include "ring_queue.h"
+
+#define usart1 USART1
+#define uart5 UART5
+typedef uint32_t device_handle;
+extern device_handle g_uart_term_handle;
+#define TERM_INDEX        5
+#define TERM_PORT         UART5
+#define TERMINAL_BAUD     115200
+#define TERM_BUFF_SIZE    1500
+static u_int8_t term_in_buff[TERM_BUFF_SIZE];
+
+typedef struct _uart_device_info{
+  u_int8_t init;   //该设备是否初始化准备接收数据标志
+  u_int8_t index;  //uart设备索引，0,1,2,3
+  RingQueue uart_ring_queue;  //用于维护设备的接收缓存的循环队列
+}uart_device_info;
+
+extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart2;
+extern UART_HandleTypeDef huart3;
+extern UART_HandleTypeDef huart4;
+extern UART_HandleTypeDef huart5;
+extern UART_HandleTypeDef huart6;
+
 
 #define USART1_TX_Pin GPIO_PIN_9
 #define USART1_TX_GPIO_Port GPIOA
 #define USART1_RX_Pin GPIO_PIN_10
 #define USART1_RX_GPIO_Port GPIOA
   
-/* Includes ------------------------------------------------------------------*/
-#include "app_cfg.h"
+#define UART5_TX_Pin GPIO_PIN_12
+#define UART5_TX_GPIO_Port GPIOC
+#define UART5_RX_Pin GPIO_PIN_2
+#define UART5_RX_GPIO_Port GPIOD
 
-/* USER CODE BEGIN Includes */
 
-/* USER CODE END Includes */
 
-extern UART_HandleTypeDef huart1;
 
-/* USER CODE BEGIN Private defines */
 
-/* USER CODE END Private defines */
+void uart_send_char(char ch);
+void USART1_UART_Init();
+void UART5_UART_Init();
 
-void USART1_UART_Init(void);
-
-/* USER CODE BEGIN Prototypes */
-
-/* USER CODE END Prototypes */
 void Error_Handler(void);
-#ifdef __cplusplus
-}
-#endif
+
 
 #endif /* __USART_H__ */
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

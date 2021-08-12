@@ -116,7 +116,7 @@ typedef enum
   *           - Z  : IO Direction mode (Input, Output, Alternate or Analog)
   * @{
   */
-#define  GPIO_MODE_INPUT                        MODE_INPUT                                               /*!< Input Floating Mode                   */
+#define  GPIO_MODE_INPUT                        MODE_INPUT                                               /*! < Input Floating Mode                   */
 #define  GPIO_MODE_OUTPUT_PP                    (MODE_PP | MODE_OUTPUT)                                  /*!< Output Push Pull Mode                 */
 #define  GPIO_MODE_OUTPUT_OD                    (MODE_OD | MODE_OUTPUT)                                  /*!< Output Open Drain Mode                */
 #define  GPIO_MODE_AF_PP                        (MODE_PP | MODE_AF)                                      /*!< Alternate Function Push Pull Mode     */

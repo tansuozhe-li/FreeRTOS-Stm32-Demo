@@ -346,6 +346,8 @@
                     <state>$PROJ_DIR$\..\Drivers\sysclk</state>
                     <state>$PROJ_DIR$\..\FreeRTOS\include</state>
                     <state>$PROJ_DIR$\..\FreeRTOS\port\IAR\ARM_CM4F</state>
+                    <state>$PROJ_DIR$\..\Drivers\ringqueue</state>
+                    <state>$PROJ_DIR$\..\Drivers\debug</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -1037,6 +1039,15 @@
                 <name>$PROJ_DIR$\..\APP\Inc\app_cfg.h</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\APP\Inc\com_types.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\APP\Inc\common.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\APP\Inc\device_term.h</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\APP\Inc\FreeRTOSConfig.h</name>
             </file>
             <file>
@@ -1052,15 +1063,42 @@
                 <name>$PROJ_DIR$\..\APP\Src\app.c</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\APP\Src\device_term.c</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\APP\Src\stm32f4xx_hal_msp.c</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\APP\Src\stm32f4xx_it.c</name>
             </file>
         </group>
+        <group>
+            <name>test</name>
+            <file>
+                <name>$PROJ_DIR$\..\APP\test\key_test.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\APP\test\key_test.h</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\APP\test\led_test.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\APP\test\led_test.h</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Drivers</name>
+        <group>
+            <name>at24c02</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\at24c02\at24c02.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\at24c02\at24c02.h</name>
+            </file>
+        </group>
         <group>
             <name>CMSIS</name>
             <file>
@@ -1083,6 +1121,15 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\gpio\gpio.h</name>
+            </file>
+        </group>
+        <group>
+            <name>ringqueue</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\ringqueue\ring_queue.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\ringqueue\ring_queue.h</name>
             </file>
         </group>
         <group>
@@ -1152,6 +1199,15 @@
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\usart\usart.h</name>
+            </file>
+        </group>
+        <group>
+            <name>w25q128</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\w25q128\w25q128.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\w25q128\w25q128.h</name>
             </file>
         </group>
         <file>

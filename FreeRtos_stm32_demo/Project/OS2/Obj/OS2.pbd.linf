@@ -1,13 +1,18 @@
 ﻿D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\OS2.pbd
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\app.pbi
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\at24c02.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\croutine.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\debug.pbi
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\device_term.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\event_groups.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\gpio.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\heap_4.pbi
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\key_test.pbi
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\led_test.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\list.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\port.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\queue.pbi
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\ring_queue.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\stm32f4xx_hal.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\stm32f4xx_hal_cortex.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\stm32f4xx_hal_dma.pbi
@@ -31,3 +36,4 @@ D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\tasks.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\timers.pbi
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\usart.pbi
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\OS2\Obj\w25q128.pbi

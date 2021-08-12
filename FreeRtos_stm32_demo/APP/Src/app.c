@@ -1,4 +1,3 @@
-
 /**
   ******************************************************************************
   * @file           : app.c
@@ -13,113 +12,62 @@
 #include "sysclk.h"
 #include "FreeRTOS.h"
 #include "task.h"
-//静态创建任务
-//任务句柄
-static TaskHandle_t AppTaskCreate_Handle = NULL;
-static TaskHandle_t LED1_TASK_Handle = NULL;
-static TaskHandle_t LED2_TASK_Handle = NULL;
+#include "device_term.h"
+#include "common.h"    
+    
 
-//函数声明
-static void AppTaskCreate(void);   //用于创建任务
-static void LED1_Task(void* pvParamerers);  //LED1_Task任务实现
-static void LED2_Task(void* pvParamerers);  //LED2_Task任务实现
+/// @name  AppTaskCreate
+/// @brief 创建任务
+/// @param none
+/// @return none
+
+static TaskHandle_t AppTaskCreate_Handle = NULL;
+static void AppTaskCreate(void)
+{
+  MX_GPIO_Init();
+  USART1_UART_Init();
+  UART5_UART_Init();
+  
+  term_printf("\n\r\n\r............欢迎来到FreeRTOS操作系统.........\n\r\n\r");
+  term_printf("....................STM32F407................\n\r\n\r");
+  
+  taskENTER_CRITICAL();    //进入临界区  
+  init_term_module();//终端交互模块初始化 
+  led_test();//led测试
+
+  while(1)
+  {
+    vTaskDelete(AppTaskCreate_Handle); //删除起始任务
+    taskEXIT_CRITICAL();    //退出临界区
+  }
+}
 
 
 /**
   * @brief  The application entry point.
   * @retval int
   */
+
 int main(void)
 {
   HAL_Init();
   SystemClock_Config();
-  MX_GPIO_Init();
-  USART1_UART_Init();
+
      
   BaseType_t xReturn = pdPASS;
      
   xReturn = xTaskCreate((TaskFunction_t)AppTaskCreate,
-                      (const char* )"AppTaskCreate",   //任务名称
-                      (uint16_t     )512,               //任务栈大小
-                      (void*        )NULL,             //传递给任务函数的参数
-                      (UBaseType_t  )1,                //任务优先级
+                      (const char* )"AppTaskCreate",                 //任务名称
+                      (uint16_t     )TASK_CREATE_STK_SIZE,            //任务栈大小
+                      (void*        )NULL,                           //传递给任务函数的参数
+                      (UBaseType_t  )TASK_CREATE_PRIO,               //任务优先级
                       (TaskHandle_t* )&AppTaskCreate_Handle);
   if(pdPASS == xReturn)
     vTaskStartScheduler();
-//  else
-//    return -1;
+  else
+    return -1;
   
-  while (1)
-  {
-  }
-    
-}
-/*******************************************************************************
-* @函数名：AppTaskCreate
-* @功能说明：任务创建函数
-* @参数：无
-* @返回值：无
-*******************************************************************************/
-static void AppTaskCreate(void)
-{
-  BaseType_t xReturn = pdPASS;
-  
-  taskENTER_CRITICAL();    //进入临界区
-  
-  xReturn = xTaskCreate((TaskFunction_t)LED1_Task,
-                                      (const char* )"LED1_Task",   //任务名称
-                                      (uint16_t     )128,               //任务栈大小
-                                      (void*        )NULL,             //传递给任务函数的参数
-                                      (UBaseType_t  )2,                //任务优先级
-                                      (TaskHandle_t*)&LED1_TASK_Handle);
-  
-  xReturn = xTaskCreate((TaskFunction_t)LED2_Task,
-                                      (const char* )"LED2_Task",   //任务名称
-                                      (uint16_t     )128,               //任务栈大小
-                                      (void*        )NULL,             //传递给任务函数的参数
-                                      (UBaseType_t  )2,                //任务优先级
-                                      (TaskHandle_t*)&LED2_TASK_Handle);    
-    if(pdPASS == xReturn)
-    
-      vTaskDelete(AppTaskCreate_Handle);
-    
-   taskEXIT_CRITICAL();    //退出临界区
-    
-}
-/*******************************************************************************
-* @函数名：LED_Task
-* @功能说明：LED_Task任务主体
-* @参数：无
-* @返回值：无
-*******************************************************************************/
-static void LED1_Task(void* parameter)
-{
-    while (1)
-  {
-
-    HAL_GPIO_WritePin(GPIOG, LED1_Pin, GPIO_PIN_SET);
-
-   vTaskDelay(100);
-   HAL_GPIO_WritePin(GPIOG, LED1_Pin, GPIO_PIN_RESET);
-   vTaskDelay(100);
-  }
+  while (1);  
 }
 
-/*******************************************************************************
-* @函数名：LED_Task
-* @功能说明：LED_Task任务主体
-* @参数：无
-* @返回值：无
-*******************************************************************************/
-static void LED2_Task(void* parameter)
-{
-    while (1)
-  {
-   
-    HAL_GPIO_WritePin(GPIOG, LED0_Pin, GPIO_PIN_RESET);
-    vTaskDelay(500);
- HAL_GPIO_WritePin(GPIOG, LED0_Pin, GPIO_PIN_SET);
-    vTaskDelay(500);
-  }
-}
 

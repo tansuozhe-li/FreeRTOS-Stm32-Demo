@@ -10,23 +10,23 @@
 
 #ifndef __APP_CFG_H
 #define __APP_CFG_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-
-#include "stm32f4xx_hal.h"
-
-
+    
+//起始任务
+#define TASK_CREATE_PRIO                     1
+#define TASK_CREATE_STK_SIZE                 512    
+//创建终端交互任务
+#define TASK_TERM_PRIO                       2
+#define TASK_TERM_STK_SIZE                   128
 
 
 
 
 
-#ifdef __cplusplus
-}
-#endif
+
+
+
+
+
 
 #endif 
 
