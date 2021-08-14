@@ -29,7 +29,6 @@ void uart_get_char(char *ch)
          *ch = UART5->DR;
 }
 
-
 //串口1初始化
 void USART1_UART_Init()
 {
@@ -113,7 +112,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
     //PA10->Rx引脚（复用上拉输入模式）
     GPIO_InitStruct.Pin = UART5_RX_Pin;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
     GPIO_InitStruct.Alternate = GPIO_AF8_UART5;

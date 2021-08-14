@@ -9,32 +9,25 @@
 #ifndef __GPIO_H__
 #define __GPIO_H__
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-  
+ 
 #include "stm32f4xx_hal.h"
-  
-#define LED0_Pin        GPIO_PIN_13
-#define LED0_GPIO_Port  GPIOG
-#define LED1_Pin        GPIO_PIN_14
-#define LED1_GPIO_Port  GPIOG
-#define LED2_Pin        GPIO_PIN_15
-#define LED2_GPIO_Port  GPIOG
-  
-#define KEY0_Pin        GPIO_PIN_6
-#define KEY0_GPIO_Port  GPIOF
-#define KEY1_Pin        GPIO_PIN_7
-#define KEY1_GPIO_Port  GPIOF
-#define KEY2_Pin        GPIO_PIN_8
-#define KEY2_GPIO_Port  GPIOF
+#include "common.h"
 
+typedef enum
+{
+  INPUT = 0,
+  OUTPUT =1
+}GPIO_MODED;  
+ 
 
 void MX_GPIO_Init(void);
 
+void drv_gpio_openbit(GPIO_TypeDef *port, u_int16_t pin, GPIO_MODED mode, u_int8_t data);
+void drv_gpio_setbit(GPIO_TypeDef *port,u_int16_t pin);
+void drv_gpio_clrbit(GPIO_TypeDef *port,u_int16_t pin);
+u_int32_t drv_gpio_getbit(GPIO_TypeDef *port,u_int16_t pin);
+void drv_gpio_togglebit(GPIO_TypeDef *port,u_int16_t pin);
 
-#ifdef __cplusplus
-}
 #endif
-#endif /*__ GPIO_H__ */
+
 

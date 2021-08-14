@@ -6,14 +6,14 @@
   ******************************************************************************
   */
 /* Includes ------------------------------------------------------------------*/
-#include "app_cfg.h"
+#include "FreeRTOS.h" 
+#include "app_cfg.h" 
 #include "usart.h"
 #include "gpio.h"
 #include "sysclk.h"
-#include "FreeRTOS.h"
-#include "task.h"
 #include "device_term.h"
-#include "common.h"    
+#include "common.h"  
+   
     
 
 /// @name  AppTaskCreate
@@ -21,11 +21,10 @@
 /// @param none
 /// @return none
 
-static TaskHandle_t AppTaskCreate_Handle = NULL;
+TaskHandle_t AppTaskCreate_Handle;
 static void AppTaskCreate(void)
 {
-  MX_GPIO_Init();
-  USART1_UART_Init();
+
   UART5_UART_Init();
   
   term_printf("\n\r\n\r............欢迎来到FreeRTOS操作系统.........\n\r\n\r");
@@ -34,6 +33,7 @@ static void AppTaskCreate(void)
   taskENTER_CRITICAL();    //进入临界区  
   init_term_module();//终端交互模块初始化 
   led_test();//led测试
+  key_test();//key测试
 
   while(1)
   {

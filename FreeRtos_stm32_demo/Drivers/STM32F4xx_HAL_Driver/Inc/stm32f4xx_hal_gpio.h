@@ -116,12 +116,17 @@ typedef enum
   *           - Z  : IO Direction mode (Input, Output, Alternate or Analog)
   * @{
   */
+//浮动输入模式
 #define  GPIO_MODE_INPUT                        MODE_INPUT                                               /*! < Input Floating Mode                   */
+//推挽输出模式
 #define  GPIO_MODE_OUTPUT_PP                    (MODE_PP | MODE_OUTPUT)                                  /*!< Output Push Pull Mode                 */
+//开漏输出模式
 #define  GPIO_MODE_OUTPUT_OD                    (MODE_OD | MODE_OUTPUT)                                  /*!< Output Open Drain Mode                */
+//复用推挽输出模式
 #define  GPIO_MODE_AF_PP                        (MODE_PP | MODE_AF)                                      /*!< Alternate Function Push Pull Mode     */
+//复用开漏输出模式
 #define  GPIO_MODE_AF_OD                        (MODE_OD | MODE_AF)                                      /*!< Alternate Function Open Drain Mode    */
-
+//模拟模式
 #define  GPIO_MODE_ANALOG                       MODE_ANALOG                                              /*!< Analog Mode  */
 
 #define  GPIO_MODE_IT_RISING                    (EXTI_MODE | GPIO_MODE_IT | RISING_EDGE)                 /*!< External Interrupt Mode with Rising edge trigger detection          */

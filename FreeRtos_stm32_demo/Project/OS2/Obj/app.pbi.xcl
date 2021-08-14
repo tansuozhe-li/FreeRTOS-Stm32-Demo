@@ -24,6 +24,8 @@ D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Driv
 -I
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Drivers\debug
 -I
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\APP\test
+-I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
@@ -51,6 +53,8 @@ D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\FreeRTOS\port\I
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\ringqueue
 -I
 D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\debug
+-I
+D:\GitHub_FreeRtos_Stm32\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\APP\test
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8

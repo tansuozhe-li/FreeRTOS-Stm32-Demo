@@ -348,6 +348,7 @@
                     <state>$PROJ_DIR$\..\FreeRTOS\port\IAR\ARM_CM4F</state>
                     <state>$PROJ_DIR$\..\Drivers\ringqueue</state>
                     <state>$PROJ_DIR$\..\Drivers\debug</state>
+                    <state>$PROJ_DIR$\..\APP\test</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>

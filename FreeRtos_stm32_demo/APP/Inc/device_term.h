@@ -11,7 +11,6 @@
 #ifndef __DEVICE_TERM_H_
 #define __DEVICE_TERM_H_
 
-#include "usart.h"
 
 void init_term_module() ;   
   
