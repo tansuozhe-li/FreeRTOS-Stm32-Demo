@@ -8,23 +8,29 @@
 #include "device_term.h"
 #include "key_test.h"
 #include "led_test.h"
+#include "debug.h"
 
- char BEEP = 0;
+char BEEP;
 static void Key1_Task(void *parameter)
 {
   while(1)
   {
-//    if(BEEP == 1)
-//      {
-//        term_printf("\n 挂起LED任务 \n");
-//          vTaskSuspend(LED0_TASK_Handle);
-//       // vTaskSuspend(LED0_TASK_Handle);
-//      }
-////   else{
-////             term_printf("\n 恢复LED任务 \n");
-////     vTaskResume(LED0_TASK_Handle);
-////     vTaskResume(LED1_TASK_Handle);
-////     }
+     if(BEEP == 1)
+       {
+         term_printf("\n 挂起LED任务 \n");
+           vTaskSuspend(LED0_TASK_Handle);
+           vTaskSuspend(LED1_TASK_Handle);
+           vTaskSuspend(TERM_TASK_Handle);
+         BEEP = 0;
+       }
+      if(BEEP == 2)
+      {
+                term_printf("\n 恢复LED任务 \n");
+           vTaskResume(LED0_TASK_Handle);
+        vTaskResume(LED1_TASK_Handle);
+        vTaskResume(TERM_TASK_Handle);
+                BEEP = 0;
+        }
     
      vTaskDelay(100);
   }
@@ -70,19 +76,28 @@ void EXTI9_5_IRQHandler(void)
 {
   if(drv_gpio_getbit(KEY0_GPIO_Port,KEY0_Pin) == 0)
   {
-		HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);		//调用中断处理公用函数		
+	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);		//调用中断处理公用函数		
+  }
+  if(drv_gpio_getbit(KEY1_GPIO_Port,KEY1_Pin) == 0)
+  {
+    HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
   }
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-	    switch(GPIO_Pin)
-    {
-        case GPIO_PIN_6:
-				     BEEP=1; //蜂鸣器响
+   switch(GPIO_Pin)
+   {
+   case GPIO_PIN_6:
+		BEEP=1; //蜂鸣器响
+             break;
+             
+   case GPIO_PIN_7:
+             BEEP = 2;
              break;
 				
-    }
+   }
+    
 }
 void key_test()
 {
@@ -91,6 +106,6 @@ void key_test()
   drv_gpio_openbit(KEY2_GPIO_Port,KEY2_Pin,INPUT,1);
 
   EXTIX_Init();
-  //task_create_key1();
+  task_create_key1();
 }
 

@@ -19,6 +19,8 @@
 #define LED2_Pin        GPIO_PIN_15
 #define LED2_GPIO_Port  GPIOG
 
+extern TaskHandle_t LED0_TASK_Handle;
+extern TaskHandle_t LED1_TASK_Handle;
 
 void led_test();
 

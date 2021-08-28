@@ -9,10 +9,9 @@
 #include "FreeRTOS.h" 
 #include "app_cfg.h" 
 #include "usart.h"
-#include "gpio.h"
-#include "sysclk.h"
 #include "device_term.h"
 #include "common.h"  
+#include "debug.h"
    
     
 

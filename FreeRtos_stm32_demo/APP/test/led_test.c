@@ -7,6 +7,7 @@
 #include "task.h"
 #include "device_term.h"
 #include "led_test.h"
+#include "debug.h"
 
 /*******************************************************************************
 * @º¯ÊýÃû£ºLED_Task
@@ -37,16 +38,15 @@ static void LED0_Task(void* parameter)
 {
     while (1)
   {
-    //HAL_GPIO_WritePin(GPIOG, LED0_Pin, GPIO_PIN_RESET);
     drv_gpio_clrbit(GPIOG,LED0_Pin);
     vTaskDelay(50);
-    //HAL_GPIO_WritePin(GPIOG, LED0_Pin, GPIO_PIN_SET);
     drv_gpio_setbit(GPIOG,LED0_Pin);
     vTaskDelay(50);
   }
 }
+
+
 TaskHandle_t LED1_TASK_Handle;
-//extern static TaskHandle_t LED1_TASK_Handle = NULL;
 static void task_create_led1(void)
 {
   BaseType_t xReturn = pdPASS;
@@ -63,8 +63,9 @@ static void task_create_led1(void)
   else
     term_printf("\n LED1 TASK create failed \n");
 }
+
+
 TaskHandle_t LED0_TASK_Handle;
-//extern static TaskHandle_t LED0_TASK_Handle = NULL;
 static void task_create_led0(void)
 {
   BaseType_t xReturn = pdPASS;

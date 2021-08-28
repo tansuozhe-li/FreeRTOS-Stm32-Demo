@@ -29,12 +29,7 @@ void task_term()
    vTaskDelay(200);
    HAL_GPIO_WritePin(GPIOG, LED2_Pin, GPIO_PIN_RESET);
    vTaskDelay(200);
-   
-   if(BEEP== 1){
-        term_printf("\n 挂起LED0任务 \n");
-          //vTaskSuspend(LED0_TASK_Handle);
-          BEEP =0;
-   }   
+     
   }
 }
 /// 创建终端交互任务
@@ -48,9 +43,9 @@ static void task_create_term(void)
   
   xReturn = xTaskCreate((TaskFunction_t)task_term,
                        (const char* )"task_term",       
-                       (uint16_t     )TASK_TERM_STK_SIZE,          
+                       (uint16_t     )128,          
                        (void*        )NULL,             
-                       (UBaseType_t  )TASK_TERM_PRIO,                
+                       (UBaseType_t  )2,                
                        (TaskHandle_t*)&TERM_TASK_Handle);  
   if(xReturn == pdPASS)
     term_printf("\n终端交互任务创建成功\n");
