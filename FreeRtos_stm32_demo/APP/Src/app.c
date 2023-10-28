@@ -23,7 +23,7 @@ static TaskHandle_t LED2_TASK_Handle = NULL;
 static void AppTaskCreate(void);   //用于创建任务
 static void LED1_Task(void* pvParamerers);  //LED1_Task任务实现
 static void LED2_Task(void* pvParamerers);  //LED2_Task任务实现
-
+//V1.0.2
 
 /**
   * @brief  The application entry point.

@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\settings\OS2.OS2.general.xcl" --backend -f "D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\settings\OS2.OS2.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\settings\OS2.OS2.general.xcl" --backend -f "D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\settings\OS2.OS2.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\settings\OS2.OS2.general.xcl" --debug_file=$debugfile --backend -f "D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\settings\OS2.OS2.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\settings\OS2.OS2.general.xcl" --debug_file=$debugfile --backend -f "D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\settings\OS2.OS2.driver.xcl" 
 }

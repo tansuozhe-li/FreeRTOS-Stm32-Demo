@@ -764,7 +764,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\IAR\stm32f407xx_flash.icf</state>
+                    <state>D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\IAR\stm32f407xx_flash.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>

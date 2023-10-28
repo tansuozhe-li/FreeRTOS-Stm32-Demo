@@ -1,50 +1,50 @@
-"D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\APP\Src\stm32f4xx_hal_msp.c"
+"D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\APP\Src\stm32f4xx_hal_msp.c"
 -std=c11
 -ferror-limit=0
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\APP\Inc
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\APP\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\CMSIS\STM32F4xx\Include
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Drivers\CMSIS\STM32F4xx\Include
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\gpio
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Drivers\gpio
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\usart
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Drivers\usart
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\Drivers\sysclk
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\Drivers\sysclk
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\FreeRTOS\include
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\FreeRTOS\include
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Project\..\FreeRTOS\port\IAR\ARM_CM4F
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Project\..\FreeRTOS\port\IAR\ARM_CM4F
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc\c
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\inc\c
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\APP\Inc
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\APP\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\CMSIS\STM32F4xx\Include
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\CMSIS\STM32F4xx\Include
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\gpio
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\gpio
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\STM32F4xx_HAL_Driver\Inc
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\STM32F4xx_HAL_Driver\Inc
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\usart
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\usart
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\Drivers\sysclk
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\Drivers\sysclk
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\FreeRTOS\include
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\FreeRTOS\include
 -I
-D:\GitHub_FreeRtos_Stm32\FreeRtos_stm32_demo_V0.0.0\FreeRTOS\port\IAR\ARM_CM4F
+D:\GitHub\FreeRTOS-Stm32-Demo\FreeRtos_stm32_demo\FreeRTOS\port\IAR\ARM_CM4F
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
+D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -323,8 +323,8 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -DUSE_HAL_DRIVER=1
 -DSTM32F407xx=1
--D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
--D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_STRING="D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.0\\arm\\INC\\c\\DLib_Config_Normal.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V8.20.1.14183/W32 for ARM"
 -D__ICCARM_OLD_DEFINED_VAARGS__=1
 -D__VA_STACK_ALIGN__=8
